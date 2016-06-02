@@ -9,8 +9,12 @@ GET	/posts/{<[0-9]+>id}				            Application.show
 GET /posts/{tag}                                Application.listTagged
 GET	/captcha				Application.captcha
 
-#Import CRUD routes
+#Administration
+GET     /admin/?                                Admin.index
 *       /admin                                  module:crud
+
+#Import Secure routes
+*       /                                       module:secure
 
 
 
